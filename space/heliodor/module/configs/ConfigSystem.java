@@ -22,8 +22,8 @@ public class ConfigSystem {
     private File dir, configFile;
 
     public ConfigSystem() throws Exception {
-        dir = new File(Minecraft.getMinecraft().mcDataDir, "Heliodor");
-        configFile = new File(dir, "Config.heliodor");
+        dir = new File(Minecraft.getMinecraft().mcDataDir, "WasiWare");
+        configFile = new File(dir, "Config.wasiluk");
         if(!dir.exists()) dir.mkdir();
         if(!configFile.exists()) configFile.createNewFile();
     }
@@ -39,7 +39,7 @@ public class ConfigSystem {
                 else if(set instanceof OptionMode)
                     pw.println("setting - " + set.name.toLowerCase() + " - " + ((OptionMode) set).name());
                 else if (set instanceof OptionNumber)
-                    pw.println("setting - " + set.name.toLowerCase() + " - " + ((OptionNumber) set).getVal());
+                    pw.println("setting - " + set.name.toLowerCase() + " - " + ((OptionNumber) set).getVal());//zajebiste was-dev to pewnie robil
             }
         }
         pw.close();
